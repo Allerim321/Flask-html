@@ -1,22 +1,48 @@
 {% extends 'index.html' %}
 
 {% block body %}
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="text-center ">Bem-vindo ao Mercadinho G4</h1>
-            </div>
-            
-            <p class="text-center">
-                Olá, este é um shopping online de compra de roupas!
-            </p>
-            <p class="text-center">
-                Clique no botão abaixo para ver nossos produtos.
-            </p>
-
-            <div class="text-center">
-                <a href="/produtos" class="btn btn-primary btn-lg" style="background-color: rgb(101, 104, 142); border: 0;">Ver Lista de Produtos</a>
-            </div>
+<div class="container mt-4 d-flex justify-content-center align-items-center">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Bem-vindo ao Mercadinho G4</h1>
         </div>
+
+        <div class="col-12 text-center">
+            <p>Olá, este é um shopping online de compra de roupas!</p>
+        </div>
+
+            <form action="/produtos" class="col-12 text-center" style="background-color: rgb(220, 205, 225); border-radius: 30px; padding: 30px; margin-bottom: 40px;">
+
+                <div style="margin: 10px" class="form-group">
+                    <label for="exampleInputEmail1"><strong>E-mail</strong></label>
+                    <input style="max-width: 400px;" type="email" class="form-control mx-auto" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Enter email" required>
+                </div>
+
+                <div style="margin: 10px;" class="form-group">
+                    <label for="exampleInputText1"><strong>Nome</strong></label>
+                    <input style="max-width: 400px;" type="text" class="form-control mx-auto" id="exampleInputText1"
+                        placeholder="Nome" required>
+                </div>
+
+                <div style="margin: 10px;" class="form-group">
+                    <label for="exampleInputTelphon1"><strong>Telefone</strong></label>
+                    <input style="max-width: 400px;" type="tel" class="form-control mx-auto"
+                        id="exampleInputTelphon1" placeholder="Telefone: (00) 00000-0000" required>
+                </div>
+
+                <div style="margin: 10px;" class="form-group tb-5">
+                    <label for="exampleInputPassword1"><strong>Senha</strong></label>
+                    <input style="max-width: 400px;" type="password" required class="form-control mx-auto"
+                        id="exampleInputPassword1" placeholder="Senha">
+                </div>
+
+                <div class="text-center">
+                    <input type="submit" style="background-color:rgb(101, 104, 142); border-radius: 8px; margin-top: 15px; width: 150px; padding: 5px;" value="Cadastrar">
+                </div>
+            </form>
+
+
     </div>
+</div>
 {% endblock %}
